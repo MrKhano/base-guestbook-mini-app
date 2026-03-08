@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://base-guestbook-five.vercel.app"),
   title: "Base Guestbook",
   description:
-    "A simple onchain guestbook built on Base Sepolia with Next.js, RainbowKit and Wagmi.",
+    "A simple onchain guestbook built on Base with Next.js, RainbowKit and Wagmi.",
   openGraph: {
     title: "Base Guestbook",
     description:
-      "A simple onchain guestbook built on Base Sepolia with Next.js, RainbowKit and Wagmi.",
+      "A simple onchain guestbook built on Base with Next.js, RainbowKit and Wagmi.",
     url: "https://base-guestbook-five.vercel.app",
     siteName: "Base Guestbook",
     locale: "en_US",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Base Guestbook",
     description:
-      "A simple onchain guestbook built on Base Sepolia with Next.js, RainbowKit and Wagmi.",
+      "A simple onchain guestbook built on Base with Next.js, RainbowKit and Wagmi.",
       images: ["/og-image.png"],
   },
 };
