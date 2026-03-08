@@ -8,7 +8,7 @@ import { baseSepolia } from "wagmi/chains";
 
 const config = getDefaultConfig({
   appName: "Base Guestbook",
-  projectId: "TON_PROJECT_ID_WALLETCONNECT",
+  projectId: "31067f2277151334430d4b4ce94c32b8",
   chains: [baseSepolia],
   ssr: true,
 });

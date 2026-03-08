@@ -1,24 +1,21 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+const geistSans = Geist({
   variable: "--font-geist-sans",
-  weight: "100 900",
+  subsets: ["latin"],
 });
 
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  weight: "100 900",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://base-is-for-everyone-chi.vercel.app"),
   title: "Base Guestbook",
-  description: "A simple guestbook app on Base.",
+  description: "A simple onchain guestbook built on Base Sepolia.",
 };
 
 export default function RootLayout({
