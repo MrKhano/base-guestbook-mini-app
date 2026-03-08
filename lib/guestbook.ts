@@ -1,5 +1,5 @@
 export const guestbookAddress =
-  "0x54ea18621D15a9Bd41B0ca09d926704a584f38e2" as const;
+  "0x022b28604dCD7f72d88D1A3b32e6C4f426689a19" as const;
 
 export const guestbookAbi = [
   {

@@ -8,7 +8,7 @@ import {
   useWriteContract,
   useWaitForTransactionReceipt,
 } from "wagmi";
-import { baseSepolia } from "wagmi/chains";
+import { base } from "wagmi/chains";
 import { guestbookAbi, guestbookAddress } from "@/lib/guestbook";
 
 type GuestbookMessage = {
@@ -38,7 +38,7 @@ export default function Home() {
     address: guestbookAddress,
     abi: guestbookAbi,
     functionName: "getMessages",
-    chainId: baseSepolia.id,
+    chainId: base.id,
   });
 
   const messages = useMemo(() => {
@@ -60,7 +60,7 @@ export default function Home() {
       abi: guestbookAbi,
       functionName: "addMessage",
       args: [message.trim()],
-      chainId: baseSepolia.id,
+      chainId: base.id,
     });
   }
 
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="flex flex-col gap-5 rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm backdrop-blur sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm font-medium uppercase tracking-wide text-blue-600">
-              Built on Base Sepolia
+              Built on Base
             </p>
             <h1 className="mt-2 text-4xl font-bold">Base Guestbook</h1>
             <p className="mt-3 max-w-2xl text-sm text-slate-600">
@@ -98,9 +98,9 @@ export default function Home() {
             </p>
           )}
 
-          {isConnected && chain?.id !== baseSepolia.id && (
+          {isConnected && chain?.id !== base.id && (
             <p className="mt-4 rounded-2xl border border-yellow-200 bg-yellow-50 px-4 py-3 text-sm text-yellow-800">
-              Please switch your wallet to Base Sepolia.
+              Please switch your wallet to Base.
             </p>
           )}
 
@@ -120,7 +120,7 @@ export default function Home() {
                 type="submit"
                 disabled={
                   !isConnected ||
-                  chain?.id !== baseSepolia.id ||
+                  chain?.id !== base.id ||
                   !message.trim() ||
                   isPending ||
                   isConfirming
