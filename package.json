@@ -18,6 +18,9 @@
     "viem": "^2.47.0",
     "wagmi": "^2.19.5"
   },
+  "overrides": {
+    "@base-org/account": "latest"
+  },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
